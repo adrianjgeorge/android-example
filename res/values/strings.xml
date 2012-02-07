@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SimpleActivity</string>
+    <string name="appName">Android Example</string>
+    <string name="prompt">Enter a Number</string>
+    <string name="calcSquare">Press Me!</string>
 </resources>

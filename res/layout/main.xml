@@ -4,10 +4,17 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<TextView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="Hello World, SimpleActivity"
-    />
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/prompt"/>
+    <EditText android:id="@+id/inputNumber"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:numeric="integer"/>
+    <Button android:id="@+id/calcSquare"
+            android:text="@string/calcSquare"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="calculateTheSquare"/>
 </LinearLayout>
 
