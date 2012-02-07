@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>org.satjug.androidexample</groupId>
-    <artifactId>activities</artifactId>
+    <artifactId>integration-tests</artifactId>
     <packaging>apk</packaging>
-    <name>Android Example Activities</name>
+    <name>Android Example Integration Tests</name>
 
     <dependencies>
         <dependency>
@@ -23,9 +23,23 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android-test</artifactId>
+            <version>4.0.1.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.satjug.androidexample</groupId>
-            <artifactId>pojos</artifactId>
+            <artifactId>activities</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <type>apk</type>
+        </dependency>
+        <dependency>
+            <groupId>org.satjug.androidexample</groupId>
+            <artifactId>activities</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>provided</scope>
+            <type>jar</type>
         </dependency>
     </dependencies>
     <build>
@@ -46,9 +60,7 @@
                 <artifactId>android-maven-plugin</artifactId>
                 <configuration>
                     <androidManifestFile>${basedir}/src/main/resources/AndroidManifest.xml</androidManifestFile>
-                    <assetsDirectory>${basedir}/src/main/resources/assets</assetsDirectory>
                     <resourceDirectory>${basedir}/src/main/resources/res</resourceDirectory>
-                    <proguardConfig>${basedir}/src/main/resources/proguard.cfg</proguardConfig>
                     <run>
                         <debug>true</debug>
                     </run>
@@ -58,7 +70,9 @@
                     <emulator>
                         <avd>AVD0</avd>
                     </emulator>
-                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                    <test>
+                        <createReport>true</createReport>
+                    </test>
                 </configuration>
             </plugin>
             <plugin>
