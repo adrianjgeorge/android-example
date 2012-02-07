@@ -19,7 +19,6 @@
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
-        <sourceDirectory>src</sourceDirectory>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -35,6 +34,10 @@
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>android-maven-plugin</artifactId>
                 <configuration>
+                    <androidManifestFile>${basedir}/src/main/resources/AndroidManifest.xml</androidManifestFile>
+                    <assetsDirectory>${basedir}/src/main/resources/assets</assetsDirectory>
+                    <resourceDirectory>${basedir}/src/main/resources/res</resourceDirectory>
+                    <proguardConfig>${basedir}/src/main/resources/proguard.cfg</proguardConfig>
                     <run>
                         <debug>true</debug>
                     </run>
@@ -46,6 +49,15 @@
                     </emulator>
                     <undeployBeforeDeploy>true</undeployBeforeDeploy>
                 </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>default-resources</id>
+                        <phase/>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
