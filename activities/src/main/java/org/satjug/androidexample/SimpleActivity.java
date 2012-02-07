@@ -21,7 +21,8 @@ public class SimpleActivity extends Activity
 
     public void calculateTheSquare(View view) {
         int number = Integer.valueOf(inputNumber.getText().toString());
-        int total = number * number;
+        NumberSquarer numberSquarer = new NumberSquarer();
+        int total = numberSquarer.squareIt(number);
         Toast.makeText(this, "The square of " + number + " is " + total, Toast.LENGTH_SHORT).show();
     }
 }

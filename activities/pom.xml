@@ -22,6 +22,11 @@
             <version>4.0.3_r2</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.satjug.androidexample</groupId>
+            <artifactId>pojos</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
