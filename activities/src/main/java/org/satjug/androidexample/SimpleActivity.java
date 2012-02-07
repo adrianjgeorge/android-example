@@ -6,14 +6,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class SimpleActivity extends Activity
-{
+public class SimpleActivity extends Activity {
     private EditText inputNumber;
 
     /** Called when the activity is first created. */
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         inputNumber = (EditText) findViewById(R.id.inputNumber);
